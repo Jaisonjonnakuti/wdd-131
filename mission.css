@@ -1,0 +1,64 @@
+/* Removed invalid line. If you want to apply border and margin to an element, use a valid selector and syntax, e.g.:
+.some-class {
+  border: 1px solid black;
+  margin: 140px 85px 140px 85px;
+}
+*/
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 27px;
+  line-height: 1.5;
+  margin: 140px  85px;
+  border: 1px solid black;
+  border-radius: 0;
+  padding: 200px;
+  background: #fff;
+  
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: 40px;
+}
+
+.content-box {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 36px;
+  margin-bottom: 16px;
+ text-align: center;
+}
+h2 {
+  color: #006EB6;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+   font-size: 20px;
+  
+    text-align: center;
+}
+
+
+.logo {
+  display: block;
+  margin: 0 auto 24px auto;
+  width: 150px;
+  height: auto;
+}
+
+.content-box p {
+  text-align: left;
+  margin-bottom: 16px;
+}
