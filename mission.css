@@ -1,64 +1,85 @@
-/* Removed invalid line. If you want to apply border and margin to an element, use a valid selector and syntax, e.g.:
-.some-class {
-  border: 1px solid black;
-  margin: 140px 85px 140px 85px;
-}
-*/
-
-body {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 27px;
-  line-height: 1.5;
-  margin: 140px  85px;
-  border: 1px solid black;
-  border-radius: 0;
-  padding: 200px;
-  background: #fff;
-  
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
 }
 
-.center-content {
-  display: flex;
-  flex-direction: column;
-  
-  margin-top: 40px;
-}
-
-.content-box {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 32px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  
-}
-
-.title {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 36px;
-  margin-bottom: 16px;
- text-align: center;
-}
-h2 {
-  color: #006EB6;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-   font-size: 20px;
-  
+.content {
+    max-width: 600px;
     text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px;
 }
 
+.title h1 {
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.title h2 {
+    color: #006EB6;
+    letter-spacing: 2px;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+main p {
+  text-align: left;
+  margin-bottom: 20px; 
+}
+
+main p em {
+  font-style: italic;
+}
+
+.does-list {
+  text-align: left;
+  padding-left: 20px; 
+}
+
+.does-list li {
+  margin-bottom: 15px; 
+}
 
 .logo {
-  display: block;
-  margin: 0 auto 24px auto;
   width: 150px;
-  height: auto;
+  display: block;
+  margin: 30px auto 0; 
 }
 
-.content-box p {
-  text-align: left;
-  margin-bottom: 16px;
+#chooseMode {
+  position: fixed;     
+  top: 10px;            
+  left: 10px;           
+  padding: 5px;         
+  font-size: 16px;      
+  z-index: 1000;        
 }
+
+
+
+/* Dark Mode Styling */
+body.dark-mode {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .content {
+  background-color: #333;
+}
+
+body.dark-mode .title h2 {
+  color: #006EB6;
+}
+
+body.dark-mode .logo {
+  filter: brightness(0.8);
+}
+
