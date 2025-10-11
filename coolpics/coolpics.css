@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, sans-serif;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  margin: 0;
+  color: var(--text-dark);
+}
+
+a:link,
+a:visited {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1em;
+}
+
+.menu {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+}
+
+nav.open {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.5em 0;
+}
+
+main {
+  padding: 1em;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  justify-content: center;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* --- Image Viewer Modal Styles (Step 03) --- */
+
+dialog {
+  width: 100%;
+  height: 100%;
+  /* Make the background partially transparent */
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+  /* Use flexbox to center content */
+  display: flex;
+  align-items: flex-start; /* Align to the top */
+  justify-content: center;
+  padding: 0;
+  z-index: 10; /* Ensure it is on top of other content */
+}
+
+/* ::backdrop is a pseudo-element that styles the background when dialog is open */
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.viewer-content {
+  position: relative;
+  /* Bring it down from the top edge (20vh) and center it horizontally */
+  margin: 20vh auto 0;
+  max-width: 90%;
+}
+
+.viewer-content img {
+  /* Override the gallery image styles for the modal */
+  width: auto;
+  height: auto;
+  max-height: 60vh; /* Adjust max height to leave room for close button and padding */
+  max-width: 100%;
+  object-fit: contain; /* Ensure the full image is visible without cropping */
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10px; /* Position relative to the viewer-content container */
+  right: 10px;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  nav li {
+    margin: 0;
+  }
+}
