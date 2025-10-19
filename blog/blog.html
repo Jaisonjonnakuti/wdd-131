@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book review blog for kids - Kids Read for Fun">
+  <meta name="author" content="Jaison">
+  <title>Kids Read for Fun</title>
+  <link rel="stylesheet" href="blog.css">
+  <script src="blog.js" defer></script>
+</head>
+
+<body>
+  <!-- Accessibility Skip Link -->
+  <div class="skiptocontent">
+    <a href="#maincontent">Skip to main content</a>
+  </div>
+
+  <header>
+    <h1>Kids Read for Fun</h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="maincontent">
+    <section class="articles">
+      <!-- Articles dynamically injected by JS -->
+    </section>
+
+    <aside class="filters">
+      <h2>Filter Books</h2>
+      <form>
+        <label for="sort">Sort:</label>
+        <select id="sort">
+          <option value="">Select</option>
+        </select>
+
+        <label for="age">Age:</label>
+        <select id="age">
+          <option value="">Select</option>
+        </select>
+
+        <label for="genre">Genre:</label>
+        <select id="genre">
+          <option value="">Select</option>
+        </select>
+
+        <label for="rating">Rating:</label>
+        <select id="rating">
+          <option value="">Select</option>
+        </select>
+      </form>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Kids Read for Fun</p>
+  </footer>
+</body>
+</html>
