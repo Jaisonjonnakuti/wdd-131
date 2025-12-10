@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Arete Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>ARETE Site Plan</h1>
+			<h2>Jaison Jonnakuti</h2>
+			<h2>WDD 131</h2>
+		</header>
+		<main>
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>
+                Arete is a gamified lifestyle and fitness tracker designed to help users pursue excellence. 
+                It allows users to log daily habits such as workouts, sleep, water intake, and steps. 
+                By consistently meeting daily goals, users earn points to "level up" their rank from a Rookie 
+                to a Grandmaster, making self-improvement engaging and fun.
+            </p>
+
+			<h3>Audience</h3>
+			<p>
+                The target audience includes fitness enthusiasts, self-improvement seekers, and anyone looking 
+                to build better health habits through gamification. It is designed for users of all experience levels, 
+                from beginners needing motivation to advanced users ("Elites") tracking detailed metrics.
+            </p>
+
+			<h3>Dynamic elements</h3>
+			<p>
+                The website utilizes JavaScript to create a responsive, server-less experience:
+                <br>1. <strong>Local Storage Persistence:</strong> User accounts, login sessions, daily logs, and custom goals are saved directly to the browser's local storage, simulating a database.
+                <br>2. <strong>Interactive Progress Bars:</strong> Dynamic visual indicators that fill up in real-time as users log their data.
+                <br>3. <strong>Rank System Logic:</strong> A calculation engine that sums cumulative points to automatically update the user's rank badge (e.g., Rookie, Elite).
+                <br>4. <strong>Data Visualization:</strong> Integration with Chart.js to render dynamic graphs showing the user's point history over time.
+            </p>
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<img src="Screenshot 2025-12-09 174717.png" alt="Arete Logo" style="max-width: 300px;" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+            <p>
+                The site uses a modern "Dark Mode" aesthetic to convey a sleek, high-tech feel suitable for a fitness application.
+            </p>
+			
+			Palette URL:
+			<a
+				href="https://coolors.co/0f172a-1e293b-4f46e5-2dd4bf"
+				target="_blank"
+				>https://coolors.co/0f172a-1e293b-4f46e5-2dd4bf</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary (Background)</th>
+						<th>Secondary (Cards)</th>
+						<th>Accent 1 (Indigo)</th>
+						<th>Accent 2 (Teal)</th>
+					</tr>
+					<tr>
+                        <td style="background-color: #0F172A; color: white;">#0F172A</td>
+						<td style="background-color: #1E293B; color: white;">#1E293B</td>
+						<td style="background-color: #4F46E5; color: white;">#4F46E5</td>
+						<td style="background-color: #2DD4BF; color: black;">#2DD4BF</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h3>Typography</h3>
+			
+			<h4>
+				Heading Font: "Inter", sans-serif
+			</h4>
+			<h4>
+				Paragraph Font: "Inter", sans-serif
+			</h4>
+            <p>
+                I chose <strong>Inter</strong> because it is a highly legible, modern typeface that works exceptionally well 
+                on user interfaces and dashboards. Its clean lines complement the technical and data-driven nature 
+                of the application.
+            </p>
+
+			<h3>Normal paragraph example</h3>
+			<p style="font-family: 'Inter', sans-serif;">
+				Pursue Your Excellence. Track your workouts, sleep, and nutrition. Level up your rank from Rookie to Grandmaster.
+                Consistency is key to achieving Arete.
+			</p>
+			<h3>Colored paragraph example</h3>
+			<p class="colored" style="font-family: 'Inter', sans-serif; background-color: #1E293B; color: #fff;">
+				Your current rank is <strong>Elite</strong>. You have earned 1,250 points today. 
+                Keep pushing to reach the next milestone!
+			</p>
+
+			<h3>Navigation</h3>
+			<nav style="background-color: #1E293B;">
+				<a href="#" style="color: #2DD4BF;">Dashboard</a>
+				<a href="#" style="color: white;">Goal Settings</a>
+				<a href="#" style="color: white;">Progress</a>
+                <a href="#" style="color: #ef4444;">Log Out</a>
+			</nav>
+			<hr />
+
+			<h2>Content</h2>
+			<h3>Home page (Dashboard)</h3>
+			<p>
+                The main dashboard serves as the command center for the user. It displays:
+                <br>- <strong>Daily Motivation:</strong> A welcoming header.
+                <br>- <strong>Status Cards:</strong> Total cumulative score, current user rank (with visual badge), and today's specific score.
+                <br>- <strong>Metric Cards:</strong> Interactive cards for Workout, Sleep, Water, Steps, and Diet. These act as both data displays (progress bars) and buttons to open logging modals.
+            </p>
+			<h3>Page 2 (Goal Settings)</h3>
+			<p>
+                The Goal Settings page allows users to customize their experience. 
+                <br>- <strong>Form Inputs:</strong> Users can set their daily targets (e.g., changing the workout goal from 30 mins to 60 mins).
+                <br>- <strong>Difficulty Adjustment:</strong> Changing these goals affects how hard it is to earn maximum points, allowing the app to scale with the user's fitness level.
+            </p>
+			
+            <h2>Wireframes</h2>
+			<p>
+				Below are the wireframes for the Login/Landing view and the main application layout.
+			</p>
+
+			<h3>Login / Landing Page</h3>
+			<p>
+				The entry point to the application, featuring a clean layout with the logo, value proposition, and access to login/signup functionality.
+			</p>
+			<img src="login_wireframe.png" alt="Login page wireframe" style="max-width: 600px; border: 1px solid #ccc;" />
+			<img src="Screenshot 2025-12-09 184404.png" alt="Signup page wireframe" style="max-width: 600px; border: 1px solid #ccc;" />
+
+			<h3>Dashboard Concept</h3>
+			<p>
+				(Concept for Main Dashboard) - A grid layout featuring high-level stats at the top and actionable metric cards below.
+			</p>
+             </main>
+	</body>
+</html>
