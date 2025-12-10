@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arete | Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-primary-dark text-white min-h-screen flex items-center justify-center p-4" style="background-color: #0f172a;">
+
+    <div class="w-full max-w-md p-8 rounded-2xl bg-gray-800 border border-gray-700 shadow-2xl animate-fade-in-up">
+        
+        <div class="text-center mb-8">
+            <span class="text-3xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-indigo-500">
+                A R E T E
+            </span>
+            <p class="text-gray-400 mt-2">Dummy Login</p>
+        </div>
+
+        <div class="flex bg-gray-900 rounded-lg p-1 mb-6">
+            <button id="tab-login" class="w-1/2 py-2 rounded-md text-sm font-bold bg-indigo-600 text-white shadow-md transition-all">Log In</button>
+            <button id="tab-signup" class="w-1/2 py-2 rounded-md text-sm font-bold text-gray-400 hover:text-white transition-all">Sign Up</button>
+        </div>
+
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-400 mb-1">Username</label>
+                <div class="flex items-center bg-gray-900/50 rounded-lg border border-gray-700 focus-within:border-indigo-500 transition px-3">
+                    <i data-lucide="user" class="w-5 h-5 text-gray-500"></i>
+                    <input type="text" name="username" required class="w-full bg-transparent border-none focus:ring-0 text-white p-3 placeholder-gray-500" placeholder="Enter any username">
+                </div>
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-400 mb-1">Password</label>
+                <div class="flex items-center bg-gray-900/50 rounded-lg border border-gray-700 focus-within:border-indigo-500 transition px-3">
+                    <i data-lucide="lock" class="w-5 h-5 text-gray-500"></i>
+                    <input type="password" name="password" required class="w-full bg-transparent border-none focus:ring-0 text-white p-3 placeholder-gray-500" placeholder="Any password">
+                </div>
+            </div>
+            
+            <button type="submit" class="w-full py-3 mt-4 rounded-xl font-bold text-white bg-indigo-600 hover:bg-indigo-700 transition transform hover:scale-[1.02] shadow-lg shadow-indigo-500/20">
+                Enter Dashboard
+            </button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
